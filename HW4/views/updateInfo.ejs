@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title><%= title %></title>
+   </head>
+   <body>
+      <h2>Update Contact Information</h2>
+      <form method="post" action="/updateInfo">
+         <% if(typeof(errorMessage) !== 'undefined') {%>
+         <span><%= errorMessage %></span>
+         <% } %>
+         <p><input type="hidden" name="userId"  id = "userId" value=<%=user.userId%>> </p>
+         <p>
+            <label for="First Name">First Name</label>
+            <input type="text" name="fName" id="fName"
+               placeholder="First Name" required="true" value=<%=user.fName%>>
+         </p>
+         <p>
+            <label for="Last Name">Last Name</label>
+            <input type="text" name="lName" id="lName"
+               placeholder="Last Name" required="true" value=<%=user.lName%>>
+         </p>
+         <p>
+            <label for="Address">Address</label>
+            <input type="text" name="address" id="address"
+               placeholder="Address" required="true" value=<%=user.address%>>
+         </p>
+         <p>
+            <label for="City">City</label>
+            <input type="text" name="city" id="city"
+               placeholder="City" required="true" value=<%=user.city%>>
+         </p>
+          <p>
+            <label for="State">State</label>
+            <input type="text" name="state" id="state"
+               placeholder="State" required="true" value=<%=user.state%>>
+         </p>
+          <p>
+            <label for="Zip">Zip</label>
+            <input type="text" name="zip" id="zip"
+               placeholder="Zip Code" required="true" value=<%=user.zip%>>
+         </p>
+         <p>
+            <label for="email">email</label>
+            <input type="text" name="email" id="email"
+               placeholder="email id" required="true" value=<%=user.email%>>
+         </p>
+          <p>
+            <label for="username">Username</label>
+            <input type="text" name="username" id="username"
+               placeholder="username" required="true" value=<%=user.uName%>> 
+         </p>
+          <p>
+            <label for="password">Password</label>
+            <input type="text" name="password" id="password"
+               placeholder="password" required="true" value=<%=user.pWord%>>
+         </p>
+         <p>
+            <input type="submit" name="signup" id="signup" value="register"/>
+            <a href="/signin" title="sign in">sign in</a>
+         </p>
+      </form>
+   </body>
+</html>
